@@ -1,0 +1,60 @@
+spring:
+  application:
+    name: sigec
+
+  datasource:
+    url: jdbc:postgresql://localhost:5434/sigecdb
+    username: sigec
+    password: sigec
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        default_batch_fetch_size: 50
+        show_sql: ${SHOW_SQL:true}
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+  jackson:
+    serialization:
+      fail-on-empty-beans: true
+
+server:
+  port: ${SERVER_PORT:1999}
+  servlet:
+    context-path: ${SERVER_CONTEXT_PATH:/sigec-app}
+
+springdoc:
+  swagger-ui:
+    path: /docs
+  api-docs:
+    path: /v3/api-docs
+  enabled: true
+
+
+management:
+  info:
+    env:
+      enabled: true
+    app:
+      name: ${spring.application.name}
+      description: Backend Project for SIGEC
+      version: 1.0.0
+      contact: dcp@expressunion.net
+
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /actuator
+  endpoint:
+    health:
+      show-details: always
+logging:
+  console:
+    enabled: true
+  pattern:
+    file: {"timestamp":"%d{yyyy-MM-dd HH:mm:ss}","level":"%p","logger":"%c","message":"%m"}
+
+
