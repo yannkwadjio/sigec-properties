@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5434/sigecdb
+    username: sigec
+    password: sigec
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        default_batch_fetch_size: 50
+        show_sql: ${SHOW_SQL:true}
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+
+
+server:
+  port: 1999
