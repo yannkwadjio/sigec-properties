@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5434/sigecdb
+    url: jdbc:postgresql://localhost:5432/sigecdb
     username: sigec
     password: sigec
     driver-class-name: org.postgresql.Driver
