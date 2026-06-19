@@ -64,5 +64,12 @@ app:
     allowed-headers: "*"
     exposed-headers: Authorization
     max-age: 3600
+cache:
+  branches:
+    ttl-days: 30
+    max-size: 500
+  personals:
+    ttl-days: 30
+    max-size: 500
 
 
