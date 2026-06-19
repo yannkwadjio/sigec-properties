@@ -71,7 +71,7 @@ cache:
   personals:
     ttl-days: 30
     max-size: 500
-  user:
+  users:
     ttl-days: 30
     max-size: 500
 
