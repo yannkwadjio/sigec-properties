@@ -74,4 +74,7 @@ cache:
   users:
     ttl-days: 30
     max-size: 500
+  authorities:
+    ttl-days: 30
+    max-size: 500
 
