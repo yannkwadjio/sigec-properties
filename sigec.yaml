@@ -71,8 +71,7 @@ cache:
   personals:
     ttl-days: 30
     max-size: 500
-jwt:
-  secret_key: JWT_SECRET
-  default_value: 0a76eb25-20ff-415e-b8bd-065c5a76f597sigecv100kwadjionanaromeoyannickexpressunionfinancesa
-
+  users:
+    ttl-days: 30
+    max-size: 500
 
