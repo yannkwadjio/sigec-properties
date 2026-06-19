@@ -56,5 +56,13 @@ logging:
     enabled: true
   pattern:
     file: {"timestamp":"%d{yyyy-MM-dd HH:mm:ss}","level":"%p","logger":"%c","message":"%m"}
+app:
+  cors:
+    allowed-origins: ${ALLOWED_ORIGINS:http://localhost:5173}
+    allowed-methods: "*"
+    allow-credentials: true
+    allowed-headers: "*"
+    exposed-headers: Authorization
+    max-age: 3600
 
 
