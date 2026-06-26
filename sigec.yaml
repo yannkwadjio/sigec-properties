@@ -56,8 +56,18 @@ management:
         include: "*"
       base-path: /actuator
   endpoint:
+    shutdown:
+      access: unrestricted
     health:
       show-details: always
+      probes:
+        enabled: true
+  health:
+    liveness-state:
+      enabled: true
+    readiness-state:
+      enabled: true
+      
 
 info:
   app:
