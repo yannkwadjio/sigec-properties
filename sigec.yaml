@@ -50,7 +50,6 @@ management:
       description: Backend Project for SIGEC
       version: 1.0.0
       contact: dcp@expressunion.net
-
   endpoints:
     web:
       exposure:
@@ -59,6 +58,14 @@ management:
   endpoint:
     health:
       show-details: always
+
+info:
+  app:
+    name: ${spring.application.name}
+    description: Backend Project for SIGEC
+    version: 1.0.0
+    
+      
 logging:
   console:
     enabled: true
