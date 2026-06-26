@@ -39,7 +39,7 @@ eureka:
     fetchRegister: true
     registerWithEureka: true
     serviceUrl:
-      defaultZone: "http://localhost:2001/eureka/
+      defaultZone: "http://localhost:2001/eureka/"
     
 management:
   info:
